@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #c05a4e;
+  --primary-hover: #a8493d;
+  --accent: #f5efe9;
+  --accent-hover: #e7d7d1;
+  
+  /* Backgrounds */
+  --bg-main: #fbf9f4;
+  --bg-card: #ffffff;
+  --bg-input: #f8f4f1;
+  
+  /* Text */
+  --text-main: #2b2622;
+  --text-muted: #6e6965;
+  
+  /* Borders & Shadows */
+  --border-light: #e7dfd8;
+  --shadow-sm: 0 1px 2px 0 rgba(192, 90, 78, 0.08);
+  --shadow-md: 0 10px 24px -12px rgba(192, 90, 78, 0.24);
+  --shadow-lg: 0 20px 40px -20px rgba(192, 90, 78, 0.22);
+  
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+/* Global Utilities */
+.btn-primary {
+  background: linear-gradient(135deg, rgb(192, 90, 78) 0%, rgb(173, 74, 62) 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 12px 28px -16px rgba(192, 90, 78, 0.8);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgb(173, 74, 62) 0%, rgb(192, 90, 78) 100%);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+.input-field:focus {
+  background-color: var(--bg-card);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(192, 90, 78, 0.12);
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
